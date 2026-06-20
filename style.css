@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  background: black;
+  color: black;
+  margin: 0;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f0f0f0;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  padding: 50px;
+}
+.container.show-nav {
+  transform: rotate(-15deg);
+}
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.container.show-nav .circle {
+  transform: rotate(-75deg);
+}
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background: rgb(237, 206, 27);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s Linear;
+}
+
+.circle button {
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+}
+.circle button:focus {
+  outline: none;
+}
+.circle button#open {
+  left: 60%;
+}
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.content img {
+  width: 100%;
+}
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.content h1 {
+  margin: 0;
+}
+.content small {
+  font-style: italic;
+  color: #555;
+}
+.content p {
+  line-height: 1.5;
+  color: #333;
+}
+nav {
+  color: #fff;
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+nav ul li {
+  text-transform: uppercase;
+  margin: 40px 0;
+  transform: translateX(-120px);
+  transition: transform 0.4s ease-in-out;
+}
+nav ul li i {
+  font-size: 20px;
+  color: goldenrod;
+  margin-right: 10px;
+}
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150px);
+}
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200px);
+}
