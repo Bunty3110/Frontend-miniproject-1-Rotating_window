@@ -20,7 +20,7 @@ body {
   padding: 50px;
 }
 .container.show-nav {
-  transform: rotate(-17deg);
+  transform: rotate(-20deg);
 }
 .container.show-nav + nav li {
   transform: translateX(0);
